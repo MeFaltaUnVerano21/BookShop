@@ -1,7 +1,7 @@
 {% extends 'store/base.html' %}
 
 			{% block container %}
-			<div class="row">
+			<div style="margin-top: 70px;" class="row">
 				<div class="col-sm-8">
 					<div class="cart_info">
 					    <table class="table table-hover">
@@ -21,7 +21,7 @@
 					                <td class="cart_coverpage"><a href=""><img src="{{ book.coverpage.url }}"></a></td>
 					                <td>{{ book.name }}</td>
 					                <td class="cart_quantity"><input type="text" name="qty" value="{{ item.quantity }}" onchange ="updateCartItem(this,{{ book.id }})" style="width: 30px"></td>
-					                <td id="{{ book.id }}">{{ item.total_price }} TK.</td>
+					                <td id="{{ book.id }}">{{ item.total_price }} $.</td>
 					                <td><a href="{% url 'cart:cart_remove' bookid=book.id %}" class="btn btn-danger"><i class="fa fa-trash-o"></i></a></td>
 					            </tr>
 					            {% endwith %}
@@ -29,7 +29,6 @@
 					        </tbody>
 					    </table>
 						<div class="continue_or_next text-center">
-							<a href="{% url 'store:index' %}" class="btn _to_shope">Continue to Shope</a>
 							<a href="{% url 'order:order_create' %}" class="btn _to_continue">Proceed to Checkout</a>
 						</div>
 					</div>

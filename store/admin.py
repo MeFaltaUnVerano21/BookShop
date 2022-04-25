@@ -1,18 +1,8 @@
 from django.contrib import admin
-from .models import Category, Writer, Book, Slider
+from .models import  Book, Slider
 
 
-class AddCategory(admin.ModelAdmin):
-	list_display = ['name', 'slug']
-	prepopulated_fields = {'slug': ('name',)}
 
-admin.site.register(Category, AddCategory)
-
-class AddWriter(admin.ModelAdmin):
-	list_display = ['name', 'slug']
-	prepopulated_fields = {'slug': ('name',)}
-
-admin.site.register(Writer, AddWriter)
 
 class AddBook(admin.ModelAdmin):
 	list_display = ['name', 'price', 'stock', 'status', 'created', 'updated']

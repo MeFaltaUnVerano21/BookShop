@@ -7,6 +7,7 @@ from cart.cart import Cart
 from .models import Order, OrderItem
 from .forms import OrderCreateForm
 from .pdfcreator import renderPdf
+from store.models import Book
 
 def order_create(request):
 	cart = Cart(request)
@@ -21,6 +22,7 @@ def order_create(request):
 				order.totalbook = len(cart) # len(cart.cart) // number of individual book
 				order.save()
 
+
 				for item in cart:
 					OrderItem.objects.create(
 						order=order, 
@@ -29,6 +31,11 @@ def order_create(request):
 						quantity=item['quantity']
 						)
 				cart.clear()
+				stock = item["book"].stock
+				if item["quantity"] > stock:
+					return redirect('store:index')
+				stock = stock-item["quantity"]
+				Book.objects.filter(name=item["book"]).update(stock=stock)
 				return render(request, 'order/successfull.html', {'order': order})
 
 			else:

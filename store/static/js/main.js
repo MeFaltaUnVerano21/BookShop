@@ -7,7 +7,7 @@ $(document).on('ready', function() {
 			data : {bookid:1},
 			success : function(data){
 
-				$("#snackbar").html("Add To Cart");
+				$("#snackbar").html("Added To Cart");
 				var x = document.getElementById("snackbar");
 				x.className = "show";
 				setTimeout(function(){ x.className = x.className.replace("show", ""); }, 1000);

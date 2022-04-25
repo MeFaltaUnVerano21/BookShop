@@ -18,7 +18,7 @@
 			            <tr>
 			                <td>{{ forloop.counter }}</td>
 			                <td><a href="{% url 'order:order_details' id=morder.id %}">#2018{{ morder.id }}</a></td>
-			                <td>{{ morder.payable }} Tk.</td>
+			                <td>{{ morder.payable }} $.</td>
 			                <td>{{ morder.totalbook }}</td>
 			                <td class="text-center">
 			                	{% if morder.paid == True %}

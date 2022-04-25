@@ -13,21 +13,30 @@ class Cart(object):
 
     def add(self, book):
         book_id = str(book.id)
-        if book_id not in self.cart:
-            self.cart[book_id] = {'quantity': 0, 'price': str(book.price)}
-            self.cart[book_id]['quantity'] = 1
-        else:    
-            if self.cart[book_id]['quantity'] < 10:
-                self.cart[book_id]['quantity'] += 1
+        if self.check_stock(book):  
+            if book_id not in self.cart:
+                self.cart[book_id] = {'quantity': 0, 'price': str(book.price)}
+                self.cart[book_id]['quantity'] = 1
+            else:    
+                if self.cart[book_id]['quantity'] < 10:
+                    self.cart[book_id]['quantity'] += 1
+
+        else:
+            print("No stock")
 
             
 
         self.save()
 
+    def check_stock(self, book):
+        if book.stock <= 0:
+            return False
+        else:
+            return True
+
     def update(self, book, quantity):
         book_id = str(book.id)
         self.cart[book_id]['quantity'] = quantity
-        
         self.save()
 
     def save(self):

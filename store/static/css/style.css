@@ -44,7 +44,7 @@ a:focus {
   border-bottom: 1px solid #f5f5f5;
   padding-top: 10px;
   padding-bottom: 15px;
-  background: none repeat scroll 0 0 #232f3e;
+  background: none repeat scroll 0 0 #161616;
 }
 .search_box{
     padding: 2px; 
@@ -80,16 +80,14 @@ ul.sub-menu {
 	position: absolute;
 	top: 40px;
 	left: 0px;
-  background: none repeat scroll 0 0 #14243a;
+  background: none repeat scroll 0 0 #343a40;
 	list-style: none;
 	padding-left: 0px;
 	margin: 0;
-	width: 170px;
 	-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	display: none;
 	z-index: 999;
-	border-radius:8px;
 }
 
 .navbar-nav > li:hover > ul.sub-menu{
@@ -102,7 +100,7 @@ ul.sub-menu {
 }
 
 .dropdown ul.sub-menu li .active{
-  color: #FDB45E;
+  color: #343a40;
   padding-left: 0;
 }
 
@@ -131,13 +129,12 @@ ul.sub-menu {
   }
 }
 .cart, .profile{
-	background: #14243a;
+	background: #6c757d;
 	padding: 10px;
-	border-radius: 5px;
 
 }
 .totalcart{
-  color: #fac10a;
+  color: #ffffff;
   margin-right:2px;
 }
 /*============ category menu*/
@@ -180,7 +177,7 @@ ul.sub-menu {
 }
 
 .titleheader > h3, a{
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial;
   display: inline-block;
 }
 
@@ -206,7 +203,7 @@ ul.sub-menu {
 .book-wrapper a{
   display: block;
   padding-top:5px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   color: #0066c0;
   text-decoration: none;
   white-space: normal;
@@ -303,8 +300,8 @@ td a i {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 .signin-form, .signup-form{
-  margin-top:20px;
-  border: 1px solid #B9C8B9;
+  margin-top:200px;
+  border: 1px solid #000000;
   border-radius: 5px;
   padding: 15px;
 }
@@ -317,7 +314,7 @@ td a i {
   outline: 0;
 }
 .signin-form h3, .signup-form h3{
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial;
 }
 .signin-form a, .signup-form a{
   text-decoration: none;
@@ -330,11 +327,11 @@ td a i {
 }
 .auth-validate-form button{
   font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   width: 100%;
-  background: #f0c14b; 
+  background: #343a40; 
   margin: 8px 0;
-  border: 1px solid #c19a39;
+  border: 1px solid #343a40;
 }
 .signin-form .btn-default{
   background: #e7e9ec;
@@ -342,7 +339,7 @@ td a i {
   width: 100%;
   color: #111;
   font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
 
 }   
 .a-divider-break {
@@ -461,12 +458,13 @@ ul.pages>li>img{
 }
 
 .product-information, .pricebox{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: 1px solid #F7F7F0;
   padding:25px;
-  margin-top: 10px;
+  margin-top: 70px;
 }
 .product-information h3{
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial;
 }
 /*=========== Review Form */
 .rating-stars ul, .review-stars ul {
@@ -519,6 +517,7 @@ ul.pages>li>img{
     border: 1px solid #E6E4DF;
     border-radius: 3px;
     margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .cart_coverpage a img{
@@ -570,7 +569,7 @@ ul.pages>li>img{
   color:#FFFFFF;
 }
 ._to_continue{
-  background: #FEB82F;
+  background: #343a40;
 }
 
 /*======= list-order */
@@ -654,7 +653,7 @@ ul.pages>li>img{
   margin-bottom: 30px;
 }
 .ordered-info h6, .ordered-info h5{
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial;
   font-weight: bold;
 }
 
@@ -669,7 +668,7 @@ ul.pages>li>img{
   display: block;
 }
 .footer_about h3, .footer_menu h3, .footer_news h3{
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial;
   color:#ffffff;
   margin-top: 10px;
   
@@ -687,7 +686,7 @@ ul.pages>li>img{
 .footer_contact p, .footer_menu a{
   font-size: 14px;
   color:#ffffff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   display:inline-block;
 }
 .footer_menu a{

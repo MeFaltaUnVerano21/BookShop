@@ -3,20 +3,22 @@ from .models import Order
 
 class OrderCreateForm(forms.ModelForm):
 	DIVISION_CHOICES = (
-		('Dhaka', 'Dhaka'),
-		('Chattagram', 'Chattagram'),
-		('Rajshahi', 'Rajshahi '),
+		('USA', 'USA'), 
+		('AFRICA', 'AFRICA'), 
+		('EUROPE', 'EUROPE'),
+		('ASIA', 'ASIA'), 
 	)
 
 	DISCRICT_CHOICES = (
-		('Dhaka', 'Dhaka'), 
-		('Gazipur', 'Gazipur'),
-		('Narayanganj', 'Narayanganj'),
+		('USA', 'USA'), 
+		('AFRICA', 'AFRICA'), 
+		('EUROPE', 'EUROPE'),
+		('ASIA', 'ASIA'), 
 	)
 
 	PAYMENT_METHOD_CHOICES = (
-		('Rocket', 'Rocket'),
-		('Bkash','Bkash')
+		('Paypal', 'Paypal'),
+		('Credit Card', 'Credit Card'),
 	)
 
 	division = forms.ChoiceField(choices=DIVISION_CHOICES)
